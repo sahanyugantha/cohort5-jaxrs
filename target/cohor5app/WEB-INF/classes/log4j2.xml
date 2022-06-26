@@ -14,7 +14,7 @@
 		 				filePattern="xlogs/%d{yyyy-MM-dd}/bak-%d{MM-dd-yyyy}-%i.log.gz">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 			<Policies>
-				<SizeBasedTriggeringPolicy size="1MB" />
+				<SizeBasedTriggeringPolicy size="2KB" />
 			</Policies>
 		</RollingFile>
 		
@@ -22,14 +22,16 @@
     </Appenders>
     <Loggers>
         
-        <Logger name="com.sahan.cohort5app" level="trace">
+        <Logger name="com.sahan.cohor5app" level="trace">
+			<AppenderRef ref="MyFile"/> 
+        	<AppenderRef ref="MyRollingFile" />  
 			<AppenderRef ref="MyConsole" />   
         </Logger>
         
         <Root level="trace">
         	<AppenderRef ref="MyFile" />
+        	<AppenderRef ref="MyRollingFile" />  
         	<AppenderRef ref="MyConsole"/> 
-        	<AppenderRef ref="MyRollingFile" />        
         </Root>
     </Loggers>
 </Configuration>
