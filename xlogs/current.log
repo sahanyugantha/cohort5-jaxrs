@@ -1,0 +1,10 @@
+20:44:35.228 [main] ERROR com.sahan.cohor5app.test.MobileTest - THIS IS A ERROR
+20:44:35.228 [main] ERROR com.sahan.cohor5app.test.MobileTest - THIS IS A ERROR
+20:44:35.234 [main] WARN  com.sahan.cohor5app.test.MobileTest - THIS IS A WARN
+20:44:35.234 [main] WARN  com.sahan.cohor5app.test.MobileTest - THIS IS A WARN
+20:44:35.234 [main] INFO  com.sahan.cohor5app.test.MobileTest - THIS IS A INFO
+20:44:35.234 [main] INFO  com.sahan.cohor5app.test.MobileTest - THIS IS A INFO
+20:44:35.235 [main] DEBUG com.sahan.cohor5app.test.MobileTest - THIS IS A DEBUG
+20:44:35.235 [main] DEBUG com.sahan.cohor5app.test.MobileTest - THIS IS A DEBUG
+20:44:35.235 [main] TRACE com.sahan.cohor5app.test.MobileTest - THIS IS A TRACE
+20:44:35.235 [main] TRACE com.sahan.cohor5app.test.MobileTest - THIS IS A TRACE

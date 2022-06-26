@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        
+        <Console name="MyConsole" target="SYSTEM_OUT">
+        	<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+     
+        <File name="MyFile" fileName="logs/app.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		
+		 <RollingFile name="MyRollingFile" fileName="xlogs/current.log" 
+		 				filePattern="xlogs/%d{yyyy-MM-dd}/bak-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+			</Policies>
+		</RollingFile>
+		
+        
+    </Appenders>
+    <Loggers>
+        
+        <Logger name="com.sahan.cohort5app" level="trace">
+			<AppenderRef ref="MyConsole" />   
+        </Logger>
+        
+        <Root level="trace">
+        	<AppenderRef ref="MyFile" />
+        	<AppenderRef ref="MyConsole"/> 
+        	<AppenderRef ref="MyRollingFile" />        
+        </Root>
+    </Loggers>
+</Configuration>
